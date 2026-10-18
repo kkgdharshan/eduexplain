@@ -1,0 +1,173 @@
+{
+  "dataset": {
+    "name": "UCI Student Performance (Math Course)",
+    "source_file": "data/student-mat.csv",
+    "companion_file": "data/student-por.csv",
+    "dataset_selection": "Mathematics Course (student-mat.csv, N=395). Companion Portuguese dataset (student-por.csv, N=649) available in repository.",
+    "citation": "P. Cortez and A. Silva. Using Data Mining to Predict Secondary School Student Performance. 2008.",
+    "doi": "10.24432/C5TG7T",
+    "total_samples": 395,
+    "training_samples": 316,
+    "test_samples": 79,
+    "features_count": 19,
+    "train_test_split": "80% Training (316 students) / 20% Held-Out Testing (79 students)",
+    "random_seed": 42,
+    "model_version": "1.0.0",
+    "evaluation_date": "October 2026",
+    "target_definitions": {
+      "High Risk": "Higher Risk: Final Grade G3 < 10 (Failing academic threshold)",
+      "Moderate Risk": "Moderate Risk: Final Grade G3 from 10 to 13 (Satisfactory passing, vulnerable)",
+      "Low Risk": "Lower Concern: Final Grade G3 >= 14 (Proficient / Good to Excellent performance)"
+    }
+  },
+  "evaluation": {
+    "three_tier_model": {
+      "algorithm": "Logistic Regression Classifier (Multinomial, L2 penalty)",
+      "n_estimators": 100,
+      "max_depth": 6,
+      "test_accuracy": 0.8228,
+      "cv_5fold_mean_accuracy": 0.8684,
+      "cv_5fold_std": 0.0284,
+      "macro_precision": 0.8669,
+      "macro_recall": 0.8006,
+      "macro_f1": 0.8148,
+      "classes": [
+        "High Risk",
+        "Low Risk",
+        "Moderate Risk"
+      ],
+      "per_class_metrics": {
+        "High Risk": {
+          "precision": 0.8571,
+          "recall": 0.9231,
+          "f1_score": 0.8889,
+          "support": 26
+        },
+        "Low Risk": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1_score": 0.75,
+          "support": 20
+        },
+        "Moderate Risk": {
+          "precision": 0.7436,
+          "recall": 0.8788,
+          "f1_score": 0.8056,
+          "support": 33
+        }
+      },
+      "confusion_matrix": {
+        "labels": [
+          "High Risk",
+          "Low Risk",
+          "Moderate Risk"
+        ],
+        "matrix": [
+          [
+            24,
+            0,
+            2
+          ],
+          [
+            0,
+            12,
+            8
+          ],
+          [
+            4,
+            0,
+            29
+          ]
+        ]
+      }
+    },
+    "baseline_comparisons": {
+      "dummy_most_frequent": {
+        "algorithm": "Zero-R / Majority Class Baseline (DummyClassifier)",
+        "test_accuracy": 0.4177,
+        "notes": "Always predicts the most frequent class (Moderate Risk: 41.8% train prevalence)"
+      },
+      "logistic_regression": {
+        "algorithm": "Multinomial Logistic Regression (L2 penalty, max_iter=1000)",
+        "test_accuracy": 0.8608,
+        "notes": "Linear model baseline on one-hot encoded features"
+      }
+    },
+    "binary_risk_model": {
+      "algorithm": "Logistic Regression Binary Classifier (G3 < 10)",
+      "test_accuracy": 0.9367,
+      "roc_auc": 0.9906
+    },
+    "grade_regression_model": {
+      "algorithm": "Logistic / Linear Regressor (G3 Continuous Scale 0-20)",
+      "rmse": 1.452,
+      "mae": 0.929,
+      "r2_score": 0.889
+    }
+  },
+  "all_feature_names": [
+    "age",
+    "studytime",
+    "absences",
+    "failures",
+    "G1",
+    "G2",
+    "Medu",
+    "Fedu",
+    "traveltime",
+    "freetime",
+    "goout",
+    "health",
+    "schoolsup_yes",
+    "famsup_yes",
+    "paid_yes",
+    "activities_yes",
+    "higher_yes",
+    "internet_yes",
+    "romantic_yes"
+  ],
+  "feature_cols": [
+    "age",
+    "studytime",
+    "absences",
+    "failures",
+    "G1",
+    "G2",
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "higher",
+    "internet",
+    "romantic",
+    "Medu",
+    "Fedu",
+    "traveltime",
+    "freetime",
+    "goout",
+    "health"
+  ],
+  "cat_cols": [
+    "schoolsup",
+    "famsup",
+    "paid",
+    "activities",
+    "higher",
+    "internet",
+    "romantic"
+  ],
+  "num_cols": [
+    "age",
+    "studytime",
+    "absences",
+    "failures",
+    "G1",
+    "G2",
+    "Medu",
+    "Fedu",
+    "traveltime",
+    "freetime",
+    "goout",
+    "health"
+  ]
+}

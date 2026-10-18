@@ -1,0 +1,116 @@
+[
+  {
+    "feature": "G2",
+    "label": "Second Period Grade (G2)",
+    "mean_abs_shap": 0.2082,
+    "gini_importance": 0.4542
+  },
+  {
+    "feature": "G1",
+    "label": "First Period Grade (G1)",
+    "mean_abs_shap": 0.0919,
+    "gini_importance": 0.2579
+  },
+  {
+    "feature": "failures",
+    "label": "Past Course Failures",
+    "mean_abs_shap": 0.019,
+    "gini_importance": 0.0376
+  },
+  {
+    "feature": "goout",
+    "label": "Going Out With Friends",
+    "mean_abs_shap": 0.0174,
+    "gini_importance": 0.0308
+  },
+  {
+    "feature": "absences",
+    "label": "School Absences",
+    "mean_abs_shap": 0.0141,
+    "gini_importance": 0.0456
+  },
+  {
+    "feature": "age",
+    "label": "Student Age",
+    "mean_abs_shap": 0.0082,
+    "gini_importance": 0.0204
+  },
+  {
+    "feature": "romantic_yes",
+    "label": "In Romantic Relationship",
+    "mean_abs_shap": 0.0067,
+    "gini_importance": 0.0077
+  },
+  {
+    "feature": "schoolsup_yes",
+    "label": "Extra School Support",
+    "mean_abs_shap": 0.006,
+    "gini_importance": 0.0086
+  },
+  {
+    "feature": "freetime",
+    "label": "Free Time After School",
+    "mean_abs_shap": 0.0051,
+    "gini_importance": 0.0189
+  },
+  {
+    "feature": "Medu",
+    "label": "Mother's Education Level",
+    "mean_abs_shap": 0.005,
+    "gini_importance": 0.0223
+  },
+  {
+    "feature": "health",
+    "label": "Current Health Status",
+    "mean_abs_shap": 0.0045,
+    "gini_importance": 0.022
+  },
+  {
+    "feature": "traveltime",
+    "label": "Commute / Travel Time",
+    "mean_abs_shap": 0.0037,
+    "gini_importance": 0.0124
+  },
+  {
+    "feature": "Fedu",
+    "label": "Father's Education Level",
+    "mean_abs_shap": 0.0036,
+    "gini_importance": 0.0155
+  },
+  {
+    "feature": "activities_yes",
+    "label": "Extracurricular Activities",
+    "mean_abs_shap": 0.0031,
+    "gini_importance": 0.0077
+  },
+  {
+    "feature": "studytime",
+    "label": "Weekly Study Time",
+    "mean_abs_shap": 0.0029,
+    "gini_importance": 0.0146
+  },
+  {
+    "feature": "higher_yes",
+    "label": "Higher Education Aspiration",
+    "mean_abs_shap": 0.0023,
+    "gini_importance": 0.0036
+  },
+  {
+    "feature": "paid_yes",
+    "label": "Extra Paid Tutoring",
+    "mean_abs_shap": 0.0022,
+    "gini_importance": 0.0073
+  },
+  {
+    "feature": "famsup_yes",
+    "label": "Family Educational Support",
+    "mean_abs_shap": 0.002,
+    "gini_importance": 0.0072
+  },
+  {
+    "feature": "internet_yes",
+    "label": "Home Internet Access",
+    "mean_abs_shap": 0.0013,
+    "gini_importance": 0.0055
+  }
+]
